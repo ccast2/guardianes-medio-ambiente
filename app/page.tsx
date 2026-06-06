@@ -32,7 +32,13 @@ export default function Home() {
         ))}
       </ul>
 
-      <div className="mt-10 text-center">
+      <div className="mt-10 flex flex-wrap justify-center gap-3">
+        <Link
+          href="/proyecto"
+          className="inline-block rounded-full bg-white px-5 py-2 text-sm font-semibold text-emerald-700 shadow ring-1 ring-emerald-200 hover:bg-emerald-50"
+        >
+          Sobre el proyecto 📖
+        </Link>
         <Link
           href="/lider"
           className="inline-block rounded-full bg-emerald-700 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-800"
