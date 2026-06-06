@@ -42,17 +42,17 @@ export default function ProyectoPage() {
       <section className="mt-8 rounded-3xl bg-white p-5 shadow">
         <h2 className="text-xl font-bold">👩‍🏫 La profesora</h2>
         <div className="mt-4 flex items-center gap-4">
-          {/* Placeholder de foto — reemplazar luego por <img src="/proyecto/maria-ines.jpg" /> */}
-          <div className="flex h-24 w-24 flex-none items-center justify-center rounded-2xl border-2 border-dashed border-emerald-300 bg-emerald-50 text-center text-xs text-emerald-600">
-            Foto
-            <br />
-            próximamente
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/proyecto/maria-ines.png"
+            alt="Profesora María Inés Alfonso"
+            className="h-28 w-28 flex-none rounded-2xl object-cover object-[50%_25%] shadow ring-2 ring-emerald-200"
+          />
           <div>
             <p className="text-lg font-bold">María Inés Alfonso</p>
             <p className="text-emerald-700">
-              Docente líder del proyecto, acompañando a los estudiantes en su
-              camino como Guardianes del Medio Ambiente.
+              Profesora del colegio y de los niños, líder del proyecto y guía de
+              los estudiantes en su camino como Guardianes del Medio Ambiente.
             </p>
           </div>
         </div>
