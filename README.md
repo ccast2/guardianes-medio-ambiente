@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Guardianes del Medio Ambiente 🌍
 
-## Getting Started
+App escolar de reciclaje (proyecto "Reciclando al planeta vamos cuidando",
+Escuela José Joaquín Castro Martínez, vereda Bosigas Norte, Sotaquirá — programa
+Tecnokids / Ruralab). Los niños marcan qué recipientes de su punto ecológico están
+llenos, el líder agenda la recogida del camión por punto, y todos ganan sellos.
 
-First, run the development server:
+## Cómo funciona
+
+- **Niño (Guardián):** entra tocando su avatar (sin contraseña). Marca recipientes
+  llenos (🟢 vidrio, 🔵 papel/cartón, 🟡 latas/plástico, 🟤 foso de orgánicos) en su
+  casa y en la escuela, ve cuándo pasa el camión y sus logros (🌱 → 🌳 → 🌍).
+- **Líder (profe):** entra con un PIN. Ve el estado de todos los puntos, agenda la
+  recogida del camión por punto, marca "recogido" (vacía el punto y otorga un sello)
+  y administra niños/PIN.
+
+## Stack
+
+Next.js 16 (App Router) · SQLite (`better-sqlite3`) · Tailwind CSS · Vitest.
+Sin cuentas ni servicios externos: el "login" es elegir avatar + un PIN guardado en
+la base de datos.
+
+## Desarrollo local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm test           # pruebas de la capa de datos (21 tests)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La base SQLite se crea sola en `./data/recicla.db` con 5 niños de ejemplo, sus puntos
+de casa, el punto de la escuela y un PIN por defecto.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**PIN del líder por defecto: `1234`** (cambiable en Administrar ⚙️).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Despliegue en Railway
 
-## Learn More
+La app corre como servidor Node con la base SQLite en un volumen persistente.
 
-To learn more about Next.js, take a look at the following resources:
+1. `railway login`
+2. `railway init` (nuevo proyecto/service; no afecta apps existentes)
+3. En el dashboard del service: **Settings → Volumes → New Volume**, montado en `/data`.
+4. **Variables**: `DB_PATH=/data/recicla.db`.
+5. `railway up` (usa el `Dockerfile`). Railway expone un dominio `*.up.railway.app`.
+6. Opcional: conectar un repo de GitHub para auto-deploy en cada push.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+La base de datos vive en el volumen montado en `/data`, así que **persiste entre
+despliegues**.
