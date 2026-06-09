@@ -15,7 +15,7 @@ export default function Home() {
       <header className="mt-2 text-center">
         <div className="text-6xl">🌍</div>
         <h1 className="mt-2 text-3xl font-extrabold tracking-tight">
-          Guardianes del Medio Ambiente
+          Tecnokids
         </h1>
         <p className="mt-1 text-emerald-700">¿Quién eres?</p>
       </header>
