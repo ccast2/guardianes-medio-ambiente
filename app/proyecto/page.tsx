@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 export default function ProyectoPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-8">
-      <Link href="/" className="text-sm text-emerald-700">
+      <Link href="/inicio" className="text-sm text-emerald-700">
         ← Inicio
       </Link>
 
@@ -130,7 +130,7 @@ export default function ProyectoPage() {
 
       <div className="mt-8 text-center">
         <Link
-          href="/"
+          href="/inicio"
           className="inline-block rounded-full bg-emerald-700 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-800"
         >
           Volver al Inicio 🌍

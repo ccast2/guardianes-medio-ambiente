@@ -83,7 +83,7 @@ export default async function NinoPage({
   return (
     <main className="mx-auto max-w-2xl px-4 py-8">
       <div className="flex items-center justify-between">
-        <Link href="/" className="text-sm text-emerald-700">
+        <Link href="/inicio" className="text-sm text-emerald-700">
           ← Inicio
         </Link>
         <Link

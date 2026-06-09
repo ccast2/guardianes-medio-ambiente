@@ -22,7 +22,7 @@ export default function LiderPage() {
     <PinGate>
       <main className="mx-auto max-w-3xl px-4 py-8">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-sm text-emerald-700">
+          <Link href="/inicio" className="text-sm text-emerald-700">
             ← Inicio
           </Link>
           <Link

@@ -1,50 +1,135 @@
 import Link from "next/link";
-import { getDb } from "@/lib/db";
-import { listChildren } from "@/lib/recycle";
 
 export const dynamic = "force-dynamic";
 
-export default function Home() {
-  const children = listChildren(getDb());
+const ESTUDIANTES = [
+  "María José",
+  "Luis Alejandro",
+  "Thiago Joel",
+  "Jerónimo",
+  "Damián",
+];
 
+export default function Portada() {
   return (
-    <main className="mx-auto max-w-2xl px-4 py-10">
-      <header className="text-center">
-        <div className="text-6xl">🌍</div>
-        <h1 className="mt-2 text-3xl font-extrabold tracking-tight">
-          Guardianes del Medio Ambiente
+    <main className="mx-auto max-w-3xl px-4 py-8">
+      {/* Logos institucionales */}
+      <section className="flex flex-wrap items-center justify-center gap-6">
+        <div className="flex flex-col items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logos/boyaca-tic.png"
+            alt="Gobernación de Boyacá"
+            className="h-24 w-auto object-contain"
+          />
+          <span className="mt-1 text-sm font-bold tracking-[0.3em] text-emerald-900">
+            TIC
+          </span>
+        </div>
+        <div className="flex flex-col items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logos/go-escuela.png"
+            alt="Go Escuela"
+            className="h-24 w-auto object-contain"
+          />
+          <span className="mt-1 max-w-[14rem] text-center text-xs font-semibold text-emerald-700">
+            Una innovación necesaria para la educación
+          </span>
+        </div>
+      </section>
+
+      {/* Logo del equipo */}
+      <section className="mt-8 flex flex-col items-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logos/tecnokids.png"
+          alt="Tecnokids"
+          className="h-48 w-48 rounded-full object-contain shadow-lg ring-2 ring-emerald-200"
+        />
+        <p className="mt-3 text-2xl font-extrabold tracking-tight text-emerald-900">
+          Tecnokids
+        </p>
+        <p className="mt-1 text-center text-lg font-bold text-emerald-800">
+          José Joaquín Castro Martínez
+        </p>
+        <p className="text-center text-sm text-emerald-700">
+          Vereda Bosigas Norte · Sotaquirá (Boyacá)
+        </p>
+      </section>
+
+      {/* Título del proyecto */}
+      <section className="mt-8 rounded-3xl bg-white p-6 text-center shadow">
+        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-500">
+          Con Ruralab
+        </p>
+        <h1 className="mt-1 text-3xl font-extrabold leading-tight tracking-tight text-emerald-900">
+          Reciclando, al planeta vamos cuidando
         </h1>
-        <p className="mt-1 text-emerald-700">¿Quién eres?</p>
-      </header>
+        <div className="text-5xl">🌍♻️</div>
+      </section>
 
-      <ul className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-        {children.map((c) => (
-          <li key={c.id}>
-            <Link
-              href={`/nino/${c.id}`}
-              className="flex flex-col items-center rounded-3xl bg-white p-5 shadow-md transition hover:scale-105 hover:shadow-lg"
-            >
-              <span className="text-5xl">{c.avatar}</span>
-              <span className="mt-2 text-lg font-bold">{c.name}</span>
-              <span className="text-sm text-emerald-600">Grado {c.grade}</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {/* Equipo */}
+      <section className="mt-6 space-y-4 rounded-3xl bg-white/70 p-6 shadow">
+        <div className="grid grid-cols-1 gap-3 text-center sm:grid-cols-2">
+          <div className="rounded-2xl bg-white p-3 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-wide text-emerald-500">
+              Docente
+            </p>
+            <p className="font-bold text-emerald-900">María Inés Alfonso</p>
+          </div>
+          <div className="rounded-2xl bg-white p-3 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-wide text-emerald-500">
+              Líder
+            </p>
+            <p className="font-bold text-emerald-900">Erika Barrera</p>
+            <p className="text-sm text-emerald-600">Sotaquirá</p>
+          </div>
+        </div>
 
-      <div className="mt-10 flex flex-wrap justify-center gap-3">
+        <div>
+          <p className="text-center text-xs font-semibold uppercase tracking-wide text-emerald-500">
+            Estudiantes
+          </p>
+          <ul className="mt-2 flex flex-wrap justify-center gap-2">
+            {ESTUDIANTES.map((nombre) => (
+              <li
+                key={nombre}
+                className="rounded-full bg-emerald-600 px-3 py-1 text-sm font-semibold text-white shadow-sm"
+              >
+                {nombre}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <p className="text-center text-sm text-emerald-700">
+          Desarrollado por <b>Carlos Castellanos</b>
+        </p>
+      </section>
+
+      {/* Acciones */}
+      <div className="mt-8 flex flex-col items-center gap-3">
         <Link
-          href="/proyecto"
-          className="inline-block rounded-full bg-white px-5 py-2 text-sm font-semibold text-emerald-700 shadow ring-1 ring-emerald-200 hover:bg-emerald-50"
+          href="/inicio"
+          className="inline-block rounded-full bg-emerald-700 px-8 py-3 text-lg font-bold text-white shadow-lg transition hover:scale-105 hover:bg-emerald-800"
         >
-          Sobre el proyecto 📖
+          Entrar 🌍
         </Link>
-        <Link
-          href="/lider"
-          className="inline-block rounded-full bg-emerald-700 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-800"
-        >
-          Soy el líder 🧑‍🏫
-        </Link>
+        <div className="flex flex-wrap justify-center gap-3">
+          <Link
+            href="/proyecto"
+            className="text-sm font-semibold text-emerald-700 underline-offset-2 hover:underline"
+          >
+            Sobre el proyecto 📖
+          </Link>
+          <Link
+            href="/como-se-hizo"
+            className="text-sm font-semibold text-emerald-700 underline-offset-2 hover:underline"
+          >
+            ¿Cómo se hizo? 🤖
+          </Link>
+        </div>
       </div>
     </main>
   );
