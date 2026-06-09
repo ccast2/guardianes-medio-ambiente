@@ -51,8 +51,9 @@ export default function ProyectoPage() {
           <div>
             <p className="text-lg font-bold">María Inés Alfonso</p>
             <p className="text-emerald-700">
-              Profesora del colegio y de los niños, líder del proyecto y guía de
-              los estudiantes en su camino como Guardianes del Medio Ambiente.
+              Docente de la sede y de los niños, guía de los estudiantes en su
+              camino como Guardianes del Medio Ambiente. La líder del proyecto
+              es Erika Barrera.
             </p>
           </div>
         </div>
