@@ -102,10 +102,6 @@ export default function Portada() {
             ))}
           </ul>
         </div>
-
-        <p className="text-center text-sm text-emerald-700">
-          Desarrollado por <b>Carlos Castellanos</b>
-        </p>
       </section>
 
       {/* Acciones */}
