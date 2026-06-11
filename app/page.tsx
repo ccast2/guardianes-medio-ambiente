@@ -37,6 +37,14 @@ export default function Portada() {
             Una innovación necesaria para la educación
           </span>
         </div>
+        <div className="flex flex-col items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logos/ruralab.png"
+            alt="ruraLab"
+            className="h-24 w-auto object-contain"
+          />
+        </div>
       </section>
 
       {/* Logo del equipo */}
