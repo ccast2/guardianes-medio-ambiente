@@ -13,7 +13,7 @@ export default function PinGate({ children }: { children: React.ReactNode }) {
   return (
     <main className="mx-auto max-w-sm px-4 py-16 text-center">
       <div className="text-5xl">🔒</div>
-      <h1 className="mt-2 text-xl font-bold">Acceso del líder</h1>
+      <h1 className="mt-2 text-xl font-bold">Acceso del docente</h1>
       <p className="text-emerald-700">Escribe el PIN</p>
       <form
         className="mt-4"

@@ -33,7 +33,7 @@ function PickupCard({ point }: { point: PointWithBins }) {
   }
   return (
     <p className="mt-3 rounded-2xl bg-emerald-100 px-4 py-3 text-emerald-800">
-      Aún no hay fecha para <b>{point.label}</b>, ¡el líder la pondrá pronto!
+      Aún no hay fecha para <b>{point.label}</b>, ¡el docente la pondrá pronto!
     </p>
   );
 }
@@ -58,7 +58,7 @@ function PointSection({
       </div>
       {algoLleno && (
         <p className="mt-3 text-center text-sm font-semibold text-emerald-700">
-          ✅ El líder ya puede ver lo que está lleno aquí.
+          ✅ El docente ya puede ver lo que está lleno aquí.
         </p>
       )}
       <PickupCard point={point} />

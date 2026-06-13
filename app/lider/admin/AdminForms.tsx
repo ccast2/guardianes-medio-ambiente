@@ -149,7 +149,7 @@ export function PinForm({ current }: { current: string }) {
         });
       }}
     >
-      <h3 className="font-bold">PIN del líder</h3>
+      <h3 className="font-bold">PIN del docente</h3>
       <div className="mt-2 flex items-center gap-2">
         <input
           inputMode="numeric"

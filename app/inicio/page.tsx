@@ -46,7 +46,7 @@ export default function Home() {
           href="/lider"
           className="inline-block rounded-full bg-emerald-700 px-5 py-2 text-sm font-semibold text-white shadow hover:bg-emerald-800"
         >
-          Soy el líder 🧑‍🏫
+          Soy el docente 🧑‍🏫
         </Link>
       </div>
     </main>

@@ -33,7 +33,7 @@ export default function LiderPage() {
           </Link>
         </div>
 
-        <h1 className="mt-4 text-2xl font-extrabold">Tablero del líder 🧑‍🏫</h1>
+        <h1 className="mt-4 text-2xl font-extrabold">Tablero del docente 🧑‍🏫</h1>
         <p className="text-emerald-700">
           Puntos ecológicos y recogida del camión.
         </p>

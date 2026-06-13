@@ -72,7 +72,7 @@ export default function ComoSeHizoPage() {
             </li>
             <li>
               <b>El diseño.</b> Conversando con la IA se decidió cómo se vería y
-              qué pantallas tendría (niños, líder, proyecto, portada).
+              qué pantallas tendría (niños, docente, proyecto, portada).
             </li>
             <li>
               <b>La programación.</b> La IA escribió el código de cada pantalla,
@@ -80,7 +80,7 @@ export default function ComoSeHizoPage() {
             </li>
             <li>
               <b>Las pruebas.</b> Se revisó que todo funcionara (marcar
-              recipientes, ganar sellos, entrar como líder con el PIN).
+              recipientes, ganar sellos, entrar como docente con el PIN).
             </li>
             <li>
               <b>La publicación.</b> Se subió a internet para que cualquiera

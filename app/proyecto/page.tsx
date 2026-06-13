@@ -52,8 +52,7 @@ export default function ProyectoPage() {
             <p className="text-lg font-bold">María Inés Alfonso</p>
             <p className="text-emerald-700">
               Docente de la sede y de los niños, guía de los estudiantes en su
-              camino como Guardianes del Medio Ambiente. La líder del proyecto
-              es Erika Barrera.
+              camino como Guardianes del Medio Ambiente.
             </p>
           </div>
         </div>
@@ -122,7 +121,7 @@ export default function ProyectoPage() {
         <div>
           <h2 className="text-xl font-bold">🤝 Con el apoyo de</h2>
           <p className="mt-1 text-emerald-900">
-            Secretaría de Educación de Boyacá, los líderes de GO-ESCUELA y la
+            Secretaría de Educación de Boyacá, los docentes y líderes de GO-ESCUELA y la
             líder de la vereda Erika Barrera. Participan cinco estudiantes de los
             grados 1° a 5°.
           </p>
