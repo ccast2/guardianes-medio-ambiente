@@ -41,12 +41,12 @@ export default function ProyectoPage() {
       {/* Profesora */}
       <section className="mt-8 rounded-3xl bg-white p-5 shadow">
         <h2 className="text-xl font-bold">👩‍🏫 La profesora</h2>
-        <div className="mt-4 flex items-center gap-4">
+        <div className="mt-4 space-y-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/proyecto/maria-ines.png"
-            alt="Profesora María Inés Alfonso"
-            className="h-28 w-28 flex-none rounded-2xl object-cover object-[50%_25%] shadow ring-2 ring-emerald-200"
+            alt="Profesora María Inés Alfonso con sus estudiantes y la maqueta del proyecto"
+            className="w-full rounded-2xl object-cover shadow ring-2 ring-emerald-200"
           />
           <div>
             <p className="text-lg font-bold">María Inés Alfonso</p>
